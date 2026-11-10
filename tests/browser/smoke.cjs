@@ -221,11 +221,12 @@ async function newHomepage(page, language, viewport, data, requested, javascript
   assert.equal(requests(requested, index), 0, `${label}: the search index waits for the first search`);
   assert.equal(requests(requested, 'catalog-index.json') + requests(requested, 'catalog.json'), 0, `${label}: the collection data is not loaded`);
   await page.$eval('[data-search-input]', node => node.scrollIntoView({block: 'center', behavior: 'instant'}));
-  await page.type('[data-search-input]', 'ghidra');
-  await page.waitForFunction(() => document.querySelector('[data-cards] > .card') && new URL(location.href).searchParams.get('q') === 'ghidra', {timeout: 15000});
+  // Data opens on the classed records, so search a classed case whose name is unique to the term.
+  await page.type('[data-search-input]', 'openlw');
+  await page.waitForFunction(() => document.querySelector('[data-cards] > .card') && new URL(location.href).searchParams.get('q') === 'openlw', {timeout: 15000});
   assert.equal(requests(requested, index), 1, `${label}: one search index request`);
-  await page.waitForFunction(id => document.querySelector(`[data-cards] > .card[data-id="${id}"]`), {}, 'ghidra');
-  assert.equal(await page.$eval('.site-header a[hreflang]', link => new URL(link.href).search), '?q=ghidra', `${label}: the language link keeps the search`);
+  await page.waitForFunction(id => document.querySelector(`[data-cards] > .card[data-id="${id}"]`), {}, 'openlw-sonic-lost-world-case');
+  assert.equal(await page.$eval('.site-header a[hreflang]', link => new URL(link.href).search), '?q=openlw', `${label}: the language link keeps the search`);
   await noOverflow(page, label + ' with a search');
   // Arrow keys move the selection; Escape clears; zero results offer other routes rather than a count of nothing.
   await page.waitForSelector('[data-cards] > .card.is-active');
@@ -242,7 +243,7 @@ async function newHomepage(page, language, viewport, data, requested, javascript
   assert(await page.$eval('[data-cards] > .empty', box => !!box.querySelector('[data-empty-clear]') && !!box.querySelector('a[href*="sourceq=zzzzqqqq"]')), `${label}: the empty state offers other routes`);
   await page.click('[data-empty-clear]');
   await page.waitForFunction(() => document.querySelector('[data-cards] > .card'));
-  await page.type('[data-search-input]', 'ghidra');
+  await page.type('[data-search-input]', 'openlw');
   await page.waitForSelector('[data-cards] > .card.is-active');
   await Promise.all([page.waitForNavigation({waitUntil: 'load'}), page.keyboard.press('Enter')]);
   assert.match(new URL(page.url()).pathname, /\/resources\/[a-z0-9-]+\/$/, `${label}: Enter opens the selected result`);
@@ -273,7 +274,9 @@ async function homepageClassFilter(page, language, viewport) {
 // /resources/ holds every record; filters change the list in place, and section links return to the whole list.
 async function resourceListing(page, language, viewport, data) {
   const label = `${language} resources ${viewport.name}`;
-  const total = data.catalog.resources.filter(record => record.class).length;
+  // Data opens on the evidence-classed records: data resources plus benchmark and dataset papers.
+  const papers = Array.isArray(data.papers) ? data.papers : data.papers.papers;
+  const total = data.catalog.resources.filter(record => record.class).length + papers.filter(record => record.class).length;
   const route = language === 'zh' ? '/zh/resources/' : '/resources/';
   const rows = () => count(page, '[data-cards] > .card');
   assert.equal(await rows(), total, `${label}: every record is in the page`);
@@ -617,7 +620,7 @@ async function staticPage(page, route, viewport) {
 (async () => {
   execFileSync(process.env.PYTHON || 'python3', ['scripts/build_site.py'], {cwd: root, stdio: 'inherit'});
   const read = file => JSON.parse(fs.readFileSync(path.join(dist, file), 'utf8'));
-  const data = {catalog: read('catalog.json'), browser: read('source-browser.json')};
+  const data = {catalog: read('catalog.json'), papers: read('papers.json'), browser: read('source-browser.json')};
   const category = fs.readdirSync(path.join(dist, 'zh/browse')).filter(name => fs.statSync(path.join(dist, 'zh/browse', name)).isDirectory()).sort()[0];
   const routes = ['/papers/', '/zh/papers/', '/resources/', '/zh/resources/',
     ...['software', 'game', 'apps', 'website', 'hardware', 'science'].flatMap(cls => [`/data/${cls}/`, `/zh/data/${cls}/`]),
