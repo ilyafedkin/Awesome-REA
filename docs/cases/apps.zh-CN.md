@@ -6,20 +6,24 @@
 
 [English](apps.md)
 
-**43 个案例**
+**47 个案例**
 
+- [**AirVideo for Ruby：重建服务器通信协议**](https://github.com/jphastings/AirVideo) - AirVideo for Ruby 根据逆向研究的 AirVideo 服务器通信协议实现客户端。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/airvideo-ruby-protocol-case/)</sub>
 - [**bline：解析 LINE 语音通话流量**](https://github.com/thebabush/bline) - bline 研究 LINE 早期的语音通话软件栈，并提供处理其自定义 ZLIB 压缩 SIP 数据的工具。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/bline-line-voip-case/)</sub>
 - [**Drama Live：分析 Android 与网页客户端并重建 API 客户端**](https://github.com/barhomus10/dramalive-analysis) - Drama Live analysis 记录这款 IPTV 播放器的 Android APK 与网页 PWA，包括组件栈、接口路径和内容来源流程。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/dramalive-analysis-case/)</sub>
 - [**elevenlabs-reader-cli：重建 Reader 应用流式朗读流程**](https://github.com/gastonmorixe/elevenlabs-reader-cli) - elevenlabs-reader-cli 是一个 Python 命令行客户端，可创建 ElevenLabs Reader 文档，并通过 Reader WebSocket 串流播放语音。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/elevenlabs-reader-cli-case/)</sub>
 - [**Grok3API：重建 Grok 移动端 gRPC 客户端**](https://github.com/boykopovar/Grok3API) - Grok3API 用 Python 实现 Grok 移动端 gRPC 客户端。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/grok3api-mobile-grpc-case/)</sub>
 - [**HikVision QR export decoder：重建 Hik-Connect 设备导出格式**](https://github.com/maxim-smirnov/hik-qr-export) - HikVision QR export decoder 重建 Hik-Connect 设备导出二维码的格式，并提供 Python 解码与更新命令。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/hikvision-qr-export-case/)</sub>
+- [**locus-poi-db：LoMaps POI 数据库格式**](https://gitlab.com/noschinl/locus-poi-db) - locus-poi-db 研究 LocusMaps LoMaps 使用的 POI 数据库格式，并列有格式文档和 SQL 模式。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/locus-poi-db-case/)</sub>
 - [**Mi Fitness Sync：从 Android 应用重建运动记录获取流程**](https://github.com/kevinkwee/Mi-Fitness-Sync) - Mi Fitness Sync 根据 Mi Fitness Android 应用重建运动记录获取流程，并提供用于导出活动及上传 Strava 的 Python 命令行工具。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/mi-fitness-sync-case/)</sub>
+- [**Murmelbahn：解析 GraviTrax 轨道文件**](https://github.com/lfrancke/murmelbahn) - Murmelbahn 解析通过 Ravensburger 应用接口取得的 GraviTrax 轨道数据，并在网页中展示轨道信息及材料清单。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/murmelbahn-case/)</sub>
 - [**Music Tag Desktop：将 Android 音乐标签应用重建到 Windows**](https://github.com/QingZhu233/music-tag-desktop) - Music Tag Desktop 将 Android 版 Music Tag 1.2.5.2 的功能重建为 Windows 音乐标签编辑器。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/music-tag-desktop-case/)</sub>
 - [**OpenHaystack：使用 Apple“查找”网络的追踪标签**](https://github.com/seemoo-lab/openhaystack) - OpenHaystack 利用逆向还原的 Apple“查找”网络协议制作个人蓝牙追踪标签，并通过 Mac 应用查询其位置报告。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/openhaystack-find-my-case/)</sub>
 - [**Reengineering Project for ibisPaint：研究画作与画笔格式**](https://github.com/HatLink/reeng-ibispaint) - Reengineering Project for ibisPaint 研究应用的 IPV 画作、IPCF 配置及 IPBZ 画笔二维码格式。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/reeng-ibispaint-case/)</sub>
 - [**samsung-notes-format：解码 Samsung Notes 手写笔迹**](https://github.com/bxff/samsung-notes-format) - samsung-notes-format 还原 Samsung Notes .sdocx 文件中的手写几何数据。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/samsung-notes-format-case/)</sub>
 - [**SingStar Mic：还原麦克风应用通信协议**](https://github.com/kevinvalk/re-singstar-mic) - SingStar Mic 文档还原 Android 和 iOS 应用的本地发现、曲库及游戏服务交互。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/singstar-mic-protocol-case/)</sub>
 - [**Swish QR format：解析支付二维码载荷**](https://github.com/lindskogen/swish-qr-format) - Swish QR format 记录 Swish 支付二维码的载荷格式。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/swish-qr-format-case/)</sub>
+- [**wii-news-channel：Wii 新闻频道的匹配反编译**](https://github.com/hotlandsoftware/wii-news-channel) - wii-news-channel 将美国版 v7 Wii 新闻频道重建为 C/C++ 源码，目标是生成字节一致的 main.dol。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/wii-news-channel-case/)</sub>
 - [**aiowapy：WhatsApp Multi-Device 协议的 Python 实现**](https://github.com/Yarfer800/aiowapy) - aiowapy 使用 Noise 传输、Signal 会话和 WABinary 编解码器实现 WhatsApp Multi-Device 的 Python 客户端。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/aiowapy-whatsapp-protocol-case/)</sub>
 - [**Beli API：重建应用后端接口规范**](https://github.com/horse-3903/beli-api-spec) - Beli API 将 Beli 应用 10.2.0 使用的后端接口重建为 OpenAPI 3.1 规范。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/beli-api-spec-case/)</sub>
 - [**Better Essential Space：重建 Nothing 服务的 macOS 客户端**](https://github.com/Nissorn/better_essential_space) - Better Essential Space 研究 Nothing 的 Android 应用和未公开 API，重建了原生 macOS 客户端。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/better-essential-space-case/)</sub>

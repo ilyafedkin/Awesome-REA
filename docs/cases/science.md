@@ -6,8 +6,9 @@
 
 [简体中文](science.zh-CN.md)
 
-**6 case studies**
+**7 case studies**
 
+- [**perception-pnrf: PNRF measurement format reconstruction**](https://codeberg.org/Apollo3zehn/perception-pnrf) - perception-pnrf documents the reverse-engineered PNRF measurement file format used by HBK Perception and provides Python and C# parsers. <sub>Case study · Independent reconstruction · [Full entry](https://awesomerea.org/resources/perception-pnrf-case/)</sub>
 - [**sas7bdat: reconstructing the SAS7BDAT database format**](https://github.com/BioStatMatt/sas7bdat) - sas7bdat reconstructs the binary layout of SAS7BDAT database files by examining sample databases for interoperability with R. <sub>Case study · Independent reconstruction · [Full entry](https://awesomerea.org/resources/sas7bdat-format-study-case/)</sub>
 - [**Techstream for Linux: recovering Toyota diagnostic formats and workflows**](https://github.com/gon7187/techstream) - Techstream for Linux reconstructs selected Toyota and Lexus diagnostic resource formats, command behavior and transport handling in a Python GTK4 workbench. <sub>Case study · Independent reconstruction · Protocol · [Full entry](https://awesomerea.org/resources/techstream-linux-case/)</sub>
 - [**anova-power-cli: reconstructing G\*Power one-way ANOVA calculations**](https://github.com/gorkemedizozpekmezci-del/anova-power-cli) - anova-power-cli reconstructs G\*Power 3.1.9.7's one-way ANOVA power calculations in a Python CLI and MCP service. <sub>Case study · Mixed workflow · [Full entry](https://awesomerea.org/resources/anova-power-cli-case/)</sub>

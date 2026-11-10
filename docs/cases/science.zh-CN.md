@@ -6,8 +6,9 @@
 
 [English](science.md)
 
-**6 个案例**
+**7 个案例**
 
+- [**perception-pnrf：PNRF 测量文件格式重建**](https://codeberg.org/Apollo3zehn/perception-pnrf) - perception-pnrf 记录了 HBK Perception 所用 PNRF 测量文件的逆向格式规范，并提供 Python 和 C# 解析器。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/perception-pnrf-case/)</sub>
 - [**sas7bdat：重建 SAS7BDAT 数据库文件格式**](https://github.com/BioStatMatt/sas7bdat) - sas7bdat 通过检查样本数据库文件重建 SAS7BDAT 的二进制布局，以支持与 R 互操作。 <sub>案例 · 独立重建 · [完整条目](https://awesomerea.org/zh/resources/sas7bdat-format-study-case/)</sub>
 - [**Techstream for Linux：重建 Toyota 诊断格式与工作流程**](https://github.com/gon7187/techstream) - Techstream for Linux 用 Python 和 GTK4 重建部分 Toyota/Lexus 诊断资源格式、命令行为与传输处理。 <sub>案例 · 独立重建 · 协议 · [完整条目](https://awesomerea.org/zh/resources/techstream-linux-case/)</sub>
 - [**anova-power-cli：重建 G\*Power 单因素 ANOVA 计算**](https://github.com/gorkemedizozpekmezci-del/anova-power-cli) - anova-power-cli 以 Python CLI 和 MCP 服务重建 G\*Power 3.1.9.7 的单因素 ANOVA 功效计算。 <sub>案例 · 混合工具流程 · [完整条目](https://awesomerea.org/zh/resources/anova-power-cli-case/)</sub>
