@@ -51,8 +51,8 @@ def validate_route_inventory(urls, resources, papers, *, include_browse=True, in
     expected = set(routes)
     for prefix in ("", "/zh"):
         expected.update(prefix + path for path in ("/", "/resources/", "/cases/", "/papers/", "/survey/", "/about/", "/contribute/", "/api/"))
-        expected.update(f'{prefix}/data/{key}/' for key in DATA_CLASSES)
         if include_browse:
+            expected.update(f'{prefix}/data/{key}/' for key in DATA_CLASSES)
             expected.add(prefix + "/browse/")
             expected.update(f"{prefix}/browse/{category}/" for category in CATEGORIES)
         if include_discoveries:
